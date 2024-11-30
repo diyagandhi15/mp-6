@@ -20,7 +20,7 @@ const StyledButton = styled.button`
   font-size: 20px; 
 
   &:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
   }
 `
 const ProfileContainer = styled.div`
