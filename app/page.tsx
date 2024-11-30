@@ -100,7 +100,7 @@ export default function HomePage() {
           <ProfileContainer>
             <ProfileHeading>Profile</ProfileHeading>
             <ProfileImage
-              // src={user.images[0].url}
+              src={user.images[0].url}
               alt={`${user.display_name}'s profile picture`}
               />
             <ProfileInfo>User: {user.display_name}</ProfileInfo>
