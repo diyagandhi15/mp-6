@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
 const client_id = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
-const client_secret = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET;
+const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 const redirect_uri = process.env.NEXT_PUBLIC_SPOTIFY_REDIRECT_URI;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
