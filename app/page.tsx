@@ -77,12 +77,17 @@ export default function HomePage() {
 
   const fetchData = () => {
       fetch('/api/user', { credentials: 'include' })
-          .then((response) => response.text())
-          .then((text) => {
-            setUser(JSON.parse(text))
-            console.log(user)
+          .then((response) => {
+            if (response.ok) {
+              return response.json()
+            } else {
+              throw new Error('Error Fetching User:' + response.statusText)
+            }
           })
-          .catch((error) => console.error('Error fetching user:', error));
+          .then((json) => {
+            setUser(json)
+          })
+          .catch((error) => console.log(error));
   }
 
   return (
